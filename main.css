@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+body {
+    background: wheat;
+}
+
+    .container {
+        max-width: 1170px;
+        padding: 15px;
+        margin: 0 auto;
+    }
+
+        .mainmenu__list {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 200px;
+        }
+            .mainmenu__item {
+                flex: 1;
+                margin-right: 1px;
+            }
+            .mainmenu__item:last-child {
+                margin-right: 0;
+            }
+                
+                .btn {
+                    background: rgb(5, 19, 100);
+                    border: none;
+                    width: 100%;
+                    padding: 10px;
+                    color: white;
+                    font-size: 2rem;
+                    display: block;
+                    position: relative;
+                    cursor: pointer;
+                }
+
+                .btn::after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                }
+
+
+                    .btn__img-wrap {
+                        position: absolute;
+                        right: 15px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        font-size: 0;
+                    }
+
+                        .btn__img {
+                            transform: rotate(0deg);
+                            transition: transform 0.2s ease-in; 
+                        }
+
+
+                        .btn__img--opened {
+                            transform: rotate(90deg);
+                        }
+
+                .home__list {
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 0;
+                }
+
+                .home__list--opened {
+                    font-size: 1rem;
+                }
+
+                    .home__item {
+                        width: 100%;
+                    }
+                        .home__link {
+                            display: block;
+                            line-height: 3;
+                            
+                            transition: all 0.3s ease-in;
+                            background: rgb(113, 158, 243);
+                            text-align: center;
+                            color: white;
+                            border-bottom: 0.1px solid gray;
+                            text-decoration: none;
+                        }
+
